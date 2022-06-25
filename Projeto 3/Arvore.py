@@ -91,7 +91,8 @@ class BuscaArvoreBinaria(Arvore_Binaria):
         elif valor<parente.chave:
             parente.esquerda=No_Arvore(valor)
         else:
-            parente.direita=No_Arvore(valor)
+            if valor>parente.chave:    
+                parente.direita=No_Arvore(valor)
 
 
     def procurar(self,valor):
